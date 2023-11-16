@@ -7,10 +7,9 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   const card = document.querySelector('.card');
-  card.classList.add(generateRandomSuit());
+  card.classList.add(generateRandomSuit()); // Set the card suit first
   card.innerHTML = generateRandomNumber();
 };
-
 
 let generateRandomNumber = () => {
   let numbers = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
@@ -23,4 +22,3 @@ let generateRandomSuit = () => {
   let indexSuit = Math.floor(Math.random() * suit.length);
   return suit[indexSuit];
 };
-
